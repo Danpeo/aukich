@@ -1,1 +1,221 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400'); /* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --dark-color-main: #1f1f1f;
+  --dark-color-secondary: #2e2e31;
+  --pink-color-bright: #ff0059;
+  --pink-color-mid: #ec3664;
+  --pink-color-light: #f87ba6;
+  --pink-color-pale: #f69eb9;
+  --white-color: #e8e8e8;
+  --gray-color: #4d4c4c;
+  --light-color: #eae9e9;
+  --light-color-sec: #c9c0c0;
+  --yellow-color-l: #fdf6ea;
+  --pink-color-extra-l: #f1bdcd;
+}
+
+.txt-bright-pink {
+  color: var(--pink-color-bright) !important;
+}
+
+.txt-mid-pink {
+  color: var(--pink-color-mid) !important;
+}
+
+.txt-light-pink {
+  color: var(--pink-color-light) !important;
+}
+
+.txt-white {
+  color: var(--white-color) !important;
+}
+
+.txt-gray {
+  color: var(--gray-color) !important;
+}
+
+.txt-dark {
+  color: var(--dark-color-main) !important;
+}
+
+.bg-main {
+  background-color: var(--dark-color-main) !important;
+}
+
+.bg-light {
+  background-color: var(--light-color) !important;
+}
+
+.bg-yellow-l {
+  background-color: var(--yellow-color-l) !important;
+}
+
+.bg-light-sec {
+  background-color: var(--light-color-sec) !important;
+}
+
+.bg-secondary {
+  background-color: var(--dark-color-secondary) !important;
+}
+
+.bg-light-pink {
+  background-color: var(--pink-color-light) !important;
+}
+
+.bg-extra-l-pink {
+  background-color: var(--pink-color-extra-l) !important;
+}
+
+.dark-grad-bg-img {
+  background-image: linear-gradient(180deg, rgb(44 44 44) 0%, #1a1919 70%) !important;
+}
+
+.dark-grad-bg {
+  background: linear-gradient(45deg, #3237ef, #795df6);
+}
+
+@keyframes blink {
+  0% {
+    color: var(--pink-color-bright)
+  }
+  25% {
+    color: var(--pink-color-light)
+  }
+  50% {
+    color: var(--pink-color-pale)
+  }
+  75% {
+    color: var(--pink-color-light)
+  }
+  100% {
+    color: var(--pink-color-bright)
+  }
+}
+
+.animated-blink {
+  animation: blink 3s linear infinite;
+}
+
+@keyframes blink-bg {
+  0% {
+    background-color: var(--pink-color-bright)
+  }
+  25% {
+    background-color: var(--pink-color-light)
+  }
+  50% {
+    background-color: var(--pink-color-pale)
+  }
+  75% {
+    background-color: var(--pink-color-light)
+  }
+  100% {
+    background-color: var(--pink-color-bright)
+  }
+}
+
+.animated-blink-bg {
+  animation: blink-bg 3s linear infinite;
+}
+
+.btn-outline-primary {
+  border-color: var(--pink-color-mid);
+  color: var(--pink-color-mid);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--pink-color-mid);
+  border-color: var(--pink-color-mid);
+}
+
+
+.round-button {
+  width: 50px; /* Задайте желаемую ширину и высоту кнопки */
+  height: 50px;
+  border-radius: 50%; /* Задайте радиус, равный половине ширины (или высоты), чтобы сделать кнопку круглой */
+  background-color: var(--pink-color-light); /* Цвет фона кнопки */
+  color: var(--dark-color-main); /* Цвет текста кнопки */
+  text-align: center;
+  line-height: 50px; /* Выравнивание текста по центру вертикально */
+  text-decoration: none; /* Убрать подчеркивание при наведении */
+}
+
+.round-button:hover {
+  background-color: var(--pink-color-mid); /* Цвет фона при наведении */
+  /* Дополнительные стили для состояния наведения, если необходимо */
+}
+
+
+.bg-arw-btn,
+.arw-btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-arw-btn {
+  animation: pulse 1.2s ease infinite;
+  background: var(--pink-color-mid);
+}
+
+.arw-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+  border: none;
+  background: var(--pink-color-mid);
+  background-size: 18px;
+  cursor: pointer;
+  outline: none;
+}
+
+.arw-btn a {
+  position: absolute;
+  color: #FFF;
+  font-size: 17px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.crossed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.slot {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
